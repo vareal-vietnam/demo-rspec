@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test-payment.momo.vn/gw_payment/transactionProcessor
+    body:
+      encoding: UTF-8
+      string: '{"partnerCode":"MOMO","accessKey":"F8BBA842ECF85","requestId":"6fcd56d3-58ec-4c0c-bf48-8c5033c095cf","amount":"50000","orderId":"7a0cec41-9491-40e3-aaa5-735e5117a5f1","orderInfo":"test
+        pay by BookForward","returnUrl":"http://localhost:3333","notifyUrl":"https://dummy-url.com","extraData":"name=test;comp=BookForward","requestType":"captureMoMoWallet","signature":"90d3b8455ae55b81989399536ee4959e218a609d62bb8c1f85c52d700165ef83"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 07 Mar 2019 22:45:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - JSESSIONID=74355A6F1C4ECC7B683304418AB83730;path=/gw_payment/;HttpOnly
+      Pragma:
+      - no-cache
+      X-Kong-Upstream-Latency:
+      - '9'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/0.14.1
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyZXF1ZXN0SWQiOiI2ZmNkNTZkMy01OGVjLTRjMGMtYmY0OC04YzUwMzNjMDk1Y2YiLCJlcnJvckNvZGUiOjYsIm9yZGVySWQiOiI3YTBjZWM0MS05NDkxLTQwZTMtYWFhNS03MzVlNTExN2E1ZjEiLCJtZXNzYWdlIjoiT3JkZXJJZCBleGlzdHMuIFBsZWFzZSBjcmVhdGUgbmV3IHRyYW5zYWN0aW9uIiwibG9jYWxNZXNzYWdlIjoixJDGoW4gaMOgbmcgxJHDoyB04buTbiB04bqhaS4gWGluIHZ1aSBsw7JuZyB04bqhbyDEkcahbiBow6BuZyBraMOhYyIsInJlcXVlc3RUeXBlIjoiY2FwdHVyZU1vTW9XYWxsZXQiLCJwYXlVcmwiOiIiLCJzaWduYXR1cmUiOiIxNTc5OGY2MWY2MjliZGZjNWI3OThlMDc1MjFiZGVhY2E5NDk5ZTRmY2FmMzIwYjI0MDcyYjcyMmVkMTZkYzllIn0=
+    http_version: 
+  recorded_at: Thu, 07 Mar 2019 22:45:27 GMT
+recorded_with: VCR 4.0.0

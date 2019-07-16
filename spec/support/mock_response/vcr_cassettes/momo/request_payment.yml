@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://test-payment.momo.vn/gw_payment/transactionProcessor
+    body:
+      encoding: UTF-8
+      string: '{"partnerCode":"MOMO","accessKey":"F8BBA842ECF85","requestId":"d8c99a22-348d-49c2-9b1e-2031f0eefb37","amount":"50000","orderId":"c782d94a-6ea6-4f49-83a9-6c30a5b23dd4","orderInfo":"test
+        pay by BookForward","returnUrl":"http://localhost:3333","notifyUrl":"https://dummy-url.com","extraData":"name=test;comp=BookForward","requestType":"captureMoMoWallet","signature":"d89869b073564d498d62770313927a22e1beabebdf3b3a773b2d78dee7e9f907"}'
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 07 Mar 2019 22:36:10 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Set-Cookie:
+      - JSESSIONID=A0C24C2013E120989286871CBF63911B;path=/gw_payment/;HttpOnly
+      Pragma:
+      - no-cache
+      X-Kong-Upstream-Latency:
+      - '132'
+      X-Kong-Proxy-Latency:
+      - '1'
+      Via:
+      - kong/0.14.1
+      Strict-Transport-Security:
+      - max-age=15768000
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJyZXF1ZXN0SWQiOiJkOGM5OWEyMi0zNDhkLTQ5YzItOWIxZS0yMDMxZjBlZWZiMzciLCJlcnJvckNvZGUiOjAsIm9yZGVySWQiOiJjNzgyZDk0YS02ZWE2LTRmNDktODNhOS02YzMwYTViMjNkZDQiLCJtZXNzYWdlIjoiU3VjY2VzcyIsImxvY2FsTWVzc2FnZSI6IlRow6BuaCBjw7RuZyIsInJlcXVlc3RUeXBlIjoiY2FwdHVyZU1vTW9XYWxsZXQiLCJwYXlVcmwiOiJodHRwczovL3Rlc3QtcGF5bWVudC5tb21vLnZuL2d3X3BheW1lbnQvcGF5bWVudC9xcj9wYXJ0bmVyQ29kZT1NT01PJmFjY2Vzc0tleT1GOEJCQTg0MkVDRjg1JnJlcXVlc3RJZD1kOGM5OWEyMi0zNDhkLTQ5YzItOWIxZS0yMDMxZjBlZWZiMzcmYW1vdW50PTUwMDAwJm9yZGVySWQ9Yzc4MmQ5NGEtNmVhNi00ZjQ5LTgzYTktNmMzMGE1YjIzZGQ0JnNpZ25hdHVyZT00M2JlNTE4MzFjNTYyNWQ0N2QyYmUzZTgzYWRiZTYwZDMwODkxYzQ3YzI4YThjOGNkYmViMGI1NTZhZTU3MDA5JnJlcXVlc3RUeXBlPWNhcHR1cmVNb01vV2FsbGV0Iiwic2lnbmF0dXJlIjoiZGE0MDQ0OTgxNTAxNWUxOWYxZTJhNmY3NGE1ZWE1YWNhNGJlM2JkZDU5MGE2OTAzYjA5NzcxZGYwZWNkN2EwYyIsInFyQ29kZVVybCI6Imh0dHBzOi8vdGVzdC1wYXltZW50Lm1vbW8udm4vZ3dfcGF5bWVudC9zL05rNXBaUSIsImRlZXBsaW5rIjoibW9tbzovLz9hY3Rpb249cGF5V2l0aEFwcFRva2VuJmFtb3VudD01MDAwMCZmZWU9MCZyZXF1ZXN0VHlwZT1wYXltZW50Jm9yZGVyTGFiZWw9TSVDMyVBMyslQzQlOTElQzYlQTFuK2glQzMlQTBuZyZvcmRlcklkPWM3ODJkOTRhLTZlYTYtNGY0OS04M2E5LTZjMzBhNWIyM2RkNCZyZXF1ZXN0SWQ9Yzc4MmQ5NGEtNmVhNi00ZjQ5LTgzYTktNmMzMGE1YjIzZGQ0Jm1lcmNoYW50bmFtZWxhYmVsPU5oJUMzJUEwK2N1bmcrYyVFMSVCQSVBNXAmZGVzY3JpcHRpb249dGVzdCtwYXkrYnkrQm9va0ZvcndhcmQmcGFydG5lckNvZGU9TU9NTyZtZXJjaGFudGNvZGU9TU9NTyZsYW5ndWFnZT12aSZtZXJjaGFudG5hbWU9TW9NbytQYXltZW50JnBhY2thZ2VJZD0mZXh0cmFzPSZleHRyYURhdGE9bmFtZT10ZXN0O2NvbXA9Qm9va0ZvcndhcmQmZGVlcGxpbmtDYWxsYmFjaz1odHRwcyUzQSUyRiUyRnRlc3QtcGF5bWVudC5tb21vLnZuJTJGZ3dfcGF5bWVudCUyRm0yJTNGaWQlM0RWcUQ1bjAmY2FsbGJhY2tVcmw9aHR0cHMlM0ElMkYlMkZ0ZXN0LXBheW1lbnQubW9tby52biUyRmd3X3BheW1lbnQlMkZtMiUzRmlkJTNEVnFENW4wJnVybFN1Ym1pdFRva2VuPWh0dHBzJTNBJTJGJTJGdGVzdC1wYXltZW50Lm1vbW8udm4lMkZnd19wYXltZW50JTJGcGF5bWVudF93aXRoX2FwcCUzRnBhcnRuZXJDb2RlJTNETU9NTyUyNmFjY2Vzc0tleSUzREY4QkJBODQyRUNGODUlMjZyZXF1ZXN0SWQlM0RkOGM5OWEyMi0zNDhkLTQ5YzItOWIxZS0yMDMxZjBlZWZiMzclMjZvcmRlcklkJTNEYzc4MmQ5NGEtNmVhNi00ZjQ5LTgzYTktNmMzMGE1YjIzZGQ0JTI2b3JkZXJJbmZvJTNEdGVzdCUyQnBheSUyQmJ5JTJCQm9va0ZvcndhcmQlMjZhbW91bnQlM0Q1MDAwMCUyNnNpZ25hdHVyZSUzRDQzYmU1MTgzMWM1NjI1ZDQ3ZDJiZTNlODNhZGJlNjBkMzA4OTFjNDdjMjhhOGM4Y2RiZWIwYjU1NmFlNTcwMDklMjZyZXF1ZXN0VHlwZSUzRGNhcHR1cmVNb01vV2FsbGV0JTI2cGF5VHlwZSUzRGFwcC1pbi1hcHAmYXBwU2NoZW1lPSIsImRlZXBsaW5rV2ViSW5BcHAiOiJodHRwOi8vbW9tby8vP3R5cGU9d2ViaW5hcHAmYWN0aW9uPXBheW1lbnQmcmVxdWVzdElkPWQ4Yzk5YTIyLTM0OGQtNDljMi05YjFlLTIwMzFmMGVlZmIzNyZiaWxsSWQ9Yzc4MmQ5NGEtNmVhNi00ZjQ5LTgzYTktNmMzMGE1YjIzZGQ0JnBhcnRuZXJDb2RlPU1PTU8mcGFydG5lck5hbWU9TW9NbyBQYXltZW50JmFtb3VudD01MDAwMCZkZXNjcmlwdGlvbj10ZXN0IHBheSBieSBCb29rRm9yd2FyZCZub3RpZnlVcmw9aHR0cHM6Ly9kdW1teS11cmwuY29tJnJldHVyblVybD1odHRwOi8vbG9jYWxob3N0OjMzMzMmY29kZT1tb21vJmV4dHJhRGF0YT1leUp6YVdkdVlYUjFjbVVpT2lJMk1HWmtNR1kwWTJZd1pUTmhaRFJsT1dNNE9EUTVZamxqWWpRNU16aG1ZalpsTURKaU1UTTFZelV4WVRjMU5qY3paRE01T1RReU9EVTFaVEE0TVRnekluMD0mc2lnbmF0dXJlPTYwZmQwZjRjZjBlM2FkNGU5Yzg4NDliOWNiNDkzOGZiNmUwMmIxMzVjNTFhNzU2NzNkMzk5NDI4NTVlMDgxODMifQ==
+    http_version: 
+  recorded_at: Thu, 07 Mar 2019 22:36:10 GMT
+recorded_with: VCR 4.0.0
